@@ -1,0 +1,10 @@
+# robots.txt for Ubuntu Haus Studio
+# Allow all web crawlers to access the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ubuntuhaus.co.ke/sitemap.xml
+
+# Disallow admin areas if any
+Disallow: /admin/

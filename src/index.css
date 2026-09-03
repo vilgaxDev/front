@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F4F1EC;
+    color: #1C1C1C;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-sans {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+/* Ubuntu Haus Studio Exact Palette Classes */
+.bg-charcoal { background-color: #1C1C1C; }
+.text-charcoal { color: #1C1C1C; }
+.border-charcoal { border-color: #1C1C1C; }
+
+.bg-bronze { background-color: #8A6A3D; }
+.text-bronze { color: #8A6A3D; }
+.border-bronze { border-color: #8A6A3D; }
+
+.bg-taupe { background-color: #D8D2C7; }
+.text-taupe { color: #7B7569; }
+.border-taupe { border-color: #D8D2C7; }
+
+.bg-sand { background-color: #E6E1DB; }
+.border-sand { border-color: #E6E1DB; }
+
+.bg-bone { background-color: #F4F1EC; }
+.border-bone { border-color: #F4F1EC; }
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F1EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C7;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8A6A3D;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Continuous Step-by-Step Bouncing Wave Animations for 6-Step Collaborative Process */
+@keyframes stepBounceWave {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  }
+  8% {
+    transform: translateY(-14px);
+    box-shadow: 0 20px 30px -8px rgba(138, 106, 61, 0.35);
+    border-color: #8A6A3D;
+  }
+  16% {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  }
+}
+
+@keyframes numberPopWave {
+  0%, 100% {
+    transform: scale(1);
+  }
+  8% {
+    transform: scale(1.22);
+    color: #8A6A3D;
+  }
+  16% {
+    transform: scale(1);
+  }
+}
+
+@keyframes iconPulseWave {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  8% {
+    transform: scale(1.25) rotate(-6deg);
+    border-color: #8A6A3D;
+    background-color: rgba(138, 106, 61, 0.18);
+  }
+  16% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes indicatorPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+  8% {
+    opacity: 1;
+    transform: scale(1.3);
+    background-color: #8A6A3D;
+  }
+  16% {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+}
+
+/* Staggered Step Bouncing: Cycles through Step 1 to 6 in a 3.6s loop (0.6s per step) */
+.animate-step-bounce-0 { animation: stepBounceWave 3.6s ease-in-out infinite 0s; }
+.animate-step-bounce-1 { animation: stepBounceWave 3.6s ease-in-out infinite 0.6s; }
+.animate-step-bounce-2 { animation: stepBounceWave 3.6s ease-in-out infinite 1.2s; }
+.animate-step-bounce-3 { animation: stepBounceWave 3.6s ease-in-out infinite 1.8s; }
+.animate-step-bounce-4 { animation: stepBounceWave 3.6s ease-in-out infinite 2.4s; }
+.animate-step-bounce-5 { animation: stepBounceWave 3.6s ease-in-out infinite 3.0s; }
+
+.animate-num-pop-0 { animation: numberPopWave 3.6s ease-in-out infinite 0s; }
+.animate-num-pop-1 { animation: numberPopWave 3.6s ease-in-out infinite 0.6s; }
+.animate-num-pop-2 { animation: numberPopWave 3.6s ease-in-out infinite 1.2s; }
+.animate-num-pop-3 { animation: numberPopWave 3.6s ease-in-out infinite 1.8s; }
+.animate-num-pop-4 { animation: numberPopWave 3.6s ease-in-out infinite 2.4s; }
+.animate-num-pop-5 { animation: numberPopWave 3.6s ease-in-out infinite 3.0s; }
+
+.animate-icon-pulse-0 { animation: iconPulseWave 3.6s ease-in-out infinite 0s; }
+.animate-icon-pulse-1 { animation: iconPulseWave 3.6s ease-in-out infinite 0.6s; }
+.animate-icon-pulse-2 { animation: iconPulseWave 3.6s ease-in-out infinite 1.2s; }
+.animate-icon-pulse-3 { animation: iconPulseWave 3.6s ease-in-out infinite 1.8s; }
+.animate-icon-pulse-4 { animation: iconPulseWave 3.6s ease-in-out infinite 2.4s; }
+.animate-icon-pulse-5 { animation: iconPulseWave 3.6s ease-in-out infinite 3.0s; }
+
+.animate-indicator-pulse-0 { animation: indicatorPulse 3.6s ease-in-out infinite 0s; }
+.animate-indicator-pulse-1 { animation: indicatorPulse 3.6s ease-in-out infinite 0.6s; }
+.animate-indicator-pulse-2 { animation: indicatorPulse 3.6s ease-in-out infinite 1.2s; }
+.animate-indicator-pulse-3 { animation: indicatorPulse 3.6s ease-in-out infinite 1.8s; }
+.animate-indicator-pulse-4 { animation: indicatorPulse 3.6s ease-in-out infinite 2.4s; }
+.animate-indicator-pulse-5 { animation: indicatorPulse 3.6s ease-in-out infinite 3.0s; }

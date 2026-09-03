@@ -1,0 +1,6 @@
+{
+  "name": "Ubuntu Haus Studio",
+  "description": "Bespoke Architecture & Interior Design Studio featuring precise brand colors, project showcase, unveiling countdown, and interactive studio experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
